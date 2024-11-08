@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shadow-neumorphic {
+    box-shadow: 8px 8px 16px #bec8d2, -8px -8px 16px #ffffff;
+}
+
+.shadow-neumorphic-hover {
+    box-shadow: 10px 10px 20px #bec8d2, -10px -10px 20px #ffffff;
+}
+
+.shadow-neumorphic-focus {
+    box-shadow: 10px 10px 20px #bec8d2, -10px -10px 20px #ffffff, 0 0 15px rgba(0, 200, 255, 0.3);
+}
+
+.glass-shape{
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes move1 {
+    0% { transform: translateY(-50%) translateX(-50%); }
+    100% { transform: translateY(100%) translateX(100%); }
+  }
+
+  @keyframes move2 {
+    0% { transform: translateY(-30%) translateX(-50%); }
+    100% { transform: translateY(120%) translateX(120%); }
+  }
+
+  @keyframes move3 {
+    0% { transform: translateY(10%) translateX(-50%); }
+    100% { transform: translateY(150%) translateX(100%); }
+  }
+
+  .animate-move1 {
+    animation: move1 10s infinite ease-in-out;
+  }
+
+  .animate-move2 {
+    animation: move2 15s infinite ease-in-out;
+  }
+
+  .animate-move3 {
+    animation: move3 20s infinite ease-in-out;
+  }
+
