@@ -6,7 +6,7 @@ const Modal = ({close,open,encrptedData,decryptedData,screen,handleCopy,showCopy
     {/* overlay */}
      <div onClick={(e)=>{
       e.stopPropagation()
-    }} className={`relative lg:w-1/2 min-h-[60vh] duration-500 glass-shape rounded-2xl ${open ? "opacity-100" : "opacity-0"}`}>
+    }} className={`relative w-full sm:w-3/4 lg:w-1/2 min-h-[60vh] duration-500 glass-shape rounded-2xl ${open ? "opacity-100" : "opacity-0"}`}>
       <span onClick={close} className="absolute top-4 right-4 cursor-pointer text-white duration-300 hover:opacity-60"><FaTimes size={25}/></span>
      {encrptedData || decryptedData ? (
        <div className="p-6">

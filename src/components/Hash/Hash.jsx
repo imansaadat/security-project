@@ -92,7 +92,7 @@ const Hash = () => {
         onClick={() => {
           setOpenModal(false);
         }}
-        className="relative h-screen flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-800 to-gray-900 overflow-hidden"
+        className="relative h-screen flex items-center justify-center bg-gradient-to-r from-blue-800 to-gray-900 overflow-hidden p-4 sm:p-6 lg:p-8"
       >
         {/*  shapes */}
         <div className="absolute -top-16 -left-16 w-72 h-72 bg-blue-700/30 rounded-full backdrop-blur-md animate-move1"></div>
@@ -105,15 +105,13 @@ const Hash = () => {
             onClick={(e) => {
               e.stopPropagation();
             }}
-            className="glass-shape lg:w-1/2  bg-gray-900/80 backdrop-blur-md rounded-2xl p-6 border border-gray-700 shadow-xl z-10"
+            className="glass-shape w-full sm:w-3/4 lg:w-1/2 bg-gray-900/80 backdrop-blur-md rounded-2xl p-4 sm:p-6 lg:p-8 border border-gray-700 shadow-xl z-10"
           >
-            <h2 className="text-2xl flex items-center justify-center gap-2 text-center font-semibold text-white mb-5">
-              Let's take a break and have some fun{" "}
-              <FaSmile
-                className="text-green-400 relative top-[2px]"
-                size={25}
+              <h2 className="lg:text-2xl flex items-center justify-center gap-2 text-center font-semibold text-white mb-5">
+                Let's take a break and have some fun <FaSmile
+                className="text-green-400 relative text-2xl top-[2px]"
               />
-            </h2>
+              </h2>
             <div className="flex justify-center gap-5">
               <button
                 className={`bg-white bg-opacity-10 border border-white/30 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-opacity-20 transition-colors duration-300 ${
