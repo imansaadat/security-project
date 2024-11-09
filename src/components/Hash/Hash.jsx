@@ -114,7 +114,7 @@ const Hash = () => {
               </h2>
             <div className="flex justify-center gap-5">
               <button
-                className={`bg-white bg-opacity-10 border border-white/30 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-opacity-20 transition-colors duration-300 ${
+                className={`bg-white w-full bg-opacity-10 border border-white/30 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-opacity-20 transition-colors duration-300 ${
                   screen === "encrypt" ? "bg-opacity-30" : ""
                 }`}
                 onClick={() => {
@@ -125,7 +125,7 @@ const Hash = () => {
               </button>
 
               <button
-                className={`bg-white bg-opacity-10 border border-white/30 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-opacity-20 transition-colors duration-300 ${
+                className={`bg-white w-full bg-opacity-10 border border-white/30 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-opacity-20 transition-colors duration-300 ${
                   screen === "decrypt" ? "bg-opacity-30" : ""
                 }`}
                 onClick={() => {
