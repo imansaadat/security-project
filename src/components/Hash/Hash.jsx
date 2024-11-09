@@ -136,7 +136,7 @@ const Hash = () => {
               </button>
             </div>
             <textarea
-              className="w-full h-1/2 p-4 my-5 bg-white bg-opacity-10 border border-white/30 text-white font-medium rounded-lg shadow-md focus:outline-none focus:bg-opacity-20 transition-colors duration-300 placeholder-white/50 resize-none"
+              className="w-full h-1/2 p-4 my-4 bg-white bg-opacity-10 border border-white/30 text-white font-medium rounded-lg shadow-md focus:outline-none focus:bg-opacity-20 transition-colors duration-300 placeholder-white/50 resize-none"
               value={text}
               rows={6}
               onChange={({ target }) => setText(target.value)}
