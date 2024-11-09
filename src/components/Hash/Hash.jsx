@@ -19,7 +19,7 @@ const Hash = () => {
 
   const switchScreen = (type) => {
     setScreen(type);
-    setCopyText(type === "encrypt" ? "Copy Hash" : "Copy Text"); // تنظیم متن دکمه
+    setCopyText(type === "encrypt" ? "Copy Hash" : "Copy Text"); 
     setText("");
     setEncrptedData("");
     setDecryptedData("");
@@ -74,11 +74,11 @@ const Hash = () => {
       .then(() => {
         const message = screen === "encrypt" ? "Hash copied" : "Text copied";
         setShowCopyMessage(message);
-        setCopyText(screen === "encrypt" ? "Copy Hash" : "Copy Text"); // تنظیم متن دکمه بر اساس حالت
+        setCopyText(screen === "encrypt" ? "Copy Hash" : "Copy Text"); 
 
         setTimeout(() => {
           setShowCopyMessage("");
-          setCopyText(screen === "encrypt" ? "Copy Hash" : "Copy Text"); // بازگشت به متن اصلی دکمه
+          setCopyText(screen === "encrypt" ? "Copy Hash" : "Copy Text"); 
         }, 2000);
       })
       .catch((error) => {
