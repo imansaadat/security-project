@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { FaSmile } from "react-icons/fa";
 import CryptoJS from "crypto-js";
 import Modal from "../Modal/Modal";
-const SECRET_PASS = "XkhZG4fW2t2W";
+// const ENCRYPTION_KEY  = "XkhZG4fW2t2W";
+const ENCRYPTION_KEY = "vuQfBzil76D2r9bYA3m-MA";
+
 
 const Hash = () => {
   const [text, setText] = useState("");
@@ -31,7 +33,7 @@ const Hash = () => {
     try {
       const data = CryptoJS.AES.encrypt(
         JSON.stringify(text),
-        SECRET_PASS
+        ENCRYPTION_KEY
       ).toString();
       setEncrptedData(data);
       setErrorMessage("");
@@ -43,17 +45,17 @@ const Hash = () => {
   // decryptData
   const decryptData = () => {
     try {
-      const bytes = CryptoJS.AES.decrypt(text, SECRET_PASS);
+      const bytes = CryptoJS.AES.decrypt(text, ENCRYPTION_KEY);
       const data = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
       setDecryptedData(data);
       setErrorMessage("");
     } catch (error) {
-      setErrorMessage("Decryption failed. Please check the input");
+      setErrorMessage("Decryption failed...");
     }
   };
 
-  // handleClick
-  const handleClick = () => {
+  // clickHandler
+  const clickHandler = () => {
     if (!text) {
       setErrorMessage("Please enter something");
       return;
@@ -156,7 +158,7 @@ const Hash = () => {
               className={`bg-white w-full bg-opacity-10 border border-white/30 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-opacity-20 transition-colors duration-300 ${
                 errorMessage ? "mt-5" : ""
               }`}
-              onClick={handleClick}
+              onClick={clickHandler}
             >
               {screen === "encrypt" ? "Encrypt" : "Decrypt"}
             </button>

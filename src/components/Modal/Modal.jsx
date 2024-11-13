@@ -3,7 +3,7 @@ import { FaCopy,FaSmile,FaTimes } from "react-icons/fa";
 const Modal = ({close,open,encrptedData,decryptedData,screen,handleCopy,showCopyMessage,setShowCopyMessage,copyText}) => {
   return (
    <>
-    {/* overlay */}
+    {/* modal */}
      <div onClick={(e)=>{
       e.stopPropagation()
     }} className={`relative w-full sm:w-3/4 lg:w-1/2 min-h-[60vh] duration-500 glass-shape rounded-2xl ${open ? "opacity-100" : "opacity-0"}`}>
